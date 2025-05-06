@@ -9,11 +9,10 @@ export class UIController {
     this.init();
   }
 
-  init() {
+  
+  init() { 
     document.addEventListener('mousemove', () => this.showUI());
-
     document.addEventListener('dblclick', () => this.toggleFullscreen());
-
     document.addEventListener('touchstart', (e) => this.detectDoubleTap(e), { passive: false });
 
   }
