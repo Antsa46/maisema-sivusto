@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Playfair Display', serif;
+  color: #e0e0e0;           
+  background-color: #1e1e1e;
+  overflow: hidden;
+  font-size: 1.1em;
+}
+
+#hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background: url('../valokuvat/kuu/kuu1.jpg') center/contain no-repeat;
+  transition: background-image 1s ease, opacity 1s ease;
+}
+
+#hero.fade-kuva {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#peite {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.4); 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.yla-palkki {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.navigointi a {
+  color: #dcdcdc; 
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 600;
+}
+
+.navigointi a:last-child {
+  margin-right: 0;
+}
+
+.tietoalue #kello {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: right;
+  color: #cfcfcf; 
+}
+
+.astro-rivi {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  color: #ccc;
+}
+
+.lainaus {
+  text-align: center;
+  margin-top: 25vh;
+  font-style: italic;
+  font-size: 1.8rem;
+  opacity: 0.85;
+  transition: opacity 1.5s ease;
+  pointer-events: none;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.lainaus span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.kuvarivi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(50, 50, 50, 0.2);
+  overflow-x: auto;
+}
+
+.pikkukuva {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.pikkukuva.nakyva {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.pikkukuva:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px #aaa;
+  border-color: #aaa;
+}
+
+
+
+
+@media (max-width: 400px) {
+  
+  .navigointi {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    padding: 1 10px; 
+    margin-top: 10px;
+    ;
+  }
+  
+  .navigointi a {
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+  }
+  #saa, #kello {
+    font-size: 0.9rem;
+    margin-right: 2.5rem; 
+  }
+  .pikkukuva {
+    width: 50px;
+    height: 35px;
+  }
+  .lainaus {
+    font-size: 1rem;
+    margin-top: -20px;
+  }
+  .lainaus span {
+    font-size: 1rem;
+  }
+  #astroTieto {
+    transform: scale(0.5)translateX(2rem);
+    transform-origin: top left;
+  }
+}
+
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .navigointi {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+   
+  }
+  
+  .navigointi a {
+    font-size: 0.9rem;
+    margin-right: 0.75rem;
+  }
+  #saa, #kello {
+    font-size: 1rem;
+    margin-right: 2.5rem;
+  }
+  .pikkukuva {
+    width: 60px;
+    height: 40px;
+  }
+  .lainaus {
+    font-size: 1.4rem;
+  }
+  #astroTieto {
+    transform: scale(0.5)translateX(2rem);
+    transform-origin: top left;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .navigointi a {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+  #saa, #kello {
+    font-size: 1.1rem;
+  }
+  .pikkukuva {
+    width: 70px;
+    height: 45px;
+  }
+  .lainaus {
+    font-size: 1.6rem;
+  }
+}
+
+
+@media (min-width: 901px) and (max-width: 1400px) {
+  .navigointi a {
+    font-size: 1.3rem;
+    margin-right: 1.2rem;
+  }
+  #saa, #kello {
+    font-size: 1.3rem;
+  }
+  .pikkukuva {
+    width: 80px;
+    height: 50px;
+  }
+  .lainaus {
+    font-size: 1.8rem;
+  }
+}
+
+
+@media (min-width: 1401px) {
+  .navigointi a {
+    font-size: 1.4rem;
+    margin-right: 1.5rem;
+  }
+  #saa, #kello {
+    font-size: 1.5rem;
+  }
+  .pikkukuva {
+    width: 90px;
+    height: 55px;
+  }
+  .lainaus {
+    font-size: 2rem;
+  }
+
+  #astroTieto {
+    transform: scale(1.2)translateX(-30px);;
+    transform-origin: top left;
+  }
+}
+
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .lainaus {
+    font-size: 1.2rem;
+    margin-top: -10vh;
+  }
+  .lainaus span {
+    font-size: 1rem;
+  }
+
+  #astroTieto {
+    transform: scale(0.7)translateX(7rem);
+    transform-origin: top left;
+  }
+}

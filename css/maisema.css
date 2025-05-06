@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  overflow: hidden;
+  font-size: 1.1em; 
+}
+
+#hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: background-image 1s ease, opacity 1s ease;
+}
+
+#hero.fade-kuva {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#peite {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+#saa {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+.yla-palkki {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.navigointi a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 600;
+}
+
+.navigointi a:last-child {
+  margin-right: 0;
+}
+
+.tietoalue #kello {
+  font-size: 1.3rem; 
+  font-weight: bold;
+  text-align: right;
+}
+
+.lainaus {
+  text-align: center;
+  margin-top: 25vh;
+  font-style: italic;
+  font-size: 1.8rem; 
+  opacity: 0.85;
+  transition: opacity 1.5s ease;
+  pointer-events: none;
+}
+
+.lainaus span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.2rem; 
+  font-weight: 300;
+}
+
+.kuvarivi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(0, 30, 0, 0.3);
+  overflow-x: auto;
+}
+
+.pikkukuva {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: scale(0.95);
+  flex: 0 0 auto;
+}
+
+.pikkukuva.nakyva {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.pikkukuva:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 400px) {
+  .navigointi a {
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+  }
+  #saa, #kello {
+    font-size: 0.9rem;
+  }
+  .pikkukuva {
+    width: 50px;
+    height: 35px;
+  }
+  
+}
+
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .navigointi a {
+    font-size: 0.9rem;
+    margin-right: 0.75rem;
+  }
+  #saa, #kello {
+    font-size: 1rem;
+  }
+  .pikkukuva {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .navigointi a {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+  #saa, #kello {
+    font-size: 1.1rem;
+  }
+  .pikkukuva {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+
+@media (min-width: 901px) and (max-width: 1400px) {
+  .navigointi a {
+    font-size: 1.3rem; 
+    margin-right: 1.2rem;
+  }
+  #saa, #kello {
+    font-size: 1.3rem;
+  }
+  .pikkukuva {
+    width: 80px;
+    height: 50px;
+  }
+}
+
+
+@media (min-width: 1401px) {
+  .navigointi a {
+    font-size: 1.4rem; 
+    margin-right: 1.5rem;
+  }
+  #saa, #kello {
+    font-size: 1.5rem; 
+  }
+  .pikkukuva {
+    width: 90px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .lainaus {
+    font-size: 0.9rem;
+    margin-top: -10vh;
+  }
+  .lainaus span {
+    font-size: 0.8rem; 
+  }
+}
+
+
+
+
+

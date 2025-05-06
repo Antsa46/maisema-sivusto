@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    background-color: #222;
+    overflow: hidden;
+  }
+  
+  header {
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10vh 2%;
+  }
+  
+  .navigointi {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navigointi a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 3rem;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .info-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .info-text {
+    flex: 1;
+    padding: 5% 5% 5% 10%;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .info-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .info-text p {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+  
+  .info-image {
+    flex: 1;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .info-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .laskuri {
+    text-align: center;
+  }
+  
+  .laskuri .nappi-rivit button {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .laskuri .nappi-rivit button:hover {
+    background-color: #444;
+  }
+  
+  .laskuri-naytto {
+    font-size: 4rem;
+    margin-top: 1rem;
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 2% 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  footer .ala-valikko {
+    font-size: 3.5rem;
+    margin: 2.8rem 0;
+  }
+  
+  footer .ala-valikko p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  footer .ala-valikko a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 850px) {
+    .info-container {
+      flex-direction: column;
+    }
+  
+    .info-text {
+      flex: none;
+      width: 100%;
+      padding: 2rem;
+    }
+  
+    .info-image {
+      display: none;
+    }
+  
+    .laskuri .nappi-rivit button {
+      font-size: 1.5rem;
+      padding: 0.8rem;
+    }
+  
+    .laskuri-naytto {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .info-text h1 {
+      font-size: 1rem;
+    }
+  
+    .info-text p {
+      font-size: 1rem;
+    }
+  
+    .laskuri h2 {
+      font-size: 1rem;
+    }
+  
+    .laskuri .nappi-rivit button {
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+  
+    .laskuri-naytto {
+      font-size: 3.5rem;
+    }
+  
+    footer .ala-valikko {
+      font-size: 1.8rem;
+    }
+  
+    header {
+      padding: 5vh 2%;
+    }
+  
+    footer {
+      padding: 1.5% 2%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .info-text h1 {
+      font-size: 1rem;
+    }
+  
+    .info-text p {
+      font-size: 1rem;
+    }
+  
+    .laskuri h2 {
+      font-size: 1rem;
+    }
+  
+    .laskuri .nappi-rivit button {
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+  
+    .laskuri-naytto {
+      font-size: 3.5rem;
+    }
+  
+    footer .ala-valikko {
+      font-size: 1.5rem;
+    }
+  
+    header {
+      padding: 3vh 2%;
+    }
+  
+    footer {
+      padding: 1% 2%;
+    }
+  
+    footer .ala-valikko {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 1024px) and (orientation: landscape) {
+    footer {
+      height: 10vh;
+    }
+  
+    footer .ala-valikko {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .navigointi {
+      display: block;
+      text-align: center;
+    }
+  
+    .navigointi a {
+      display: block;
+      margin: 1rem 0;
+      font-size: 1.8rem;
+    }
+  
+    header {
+      font-size: 1.4rem;
+    }
+  
+    .navigointi a {
+      font-size: 1rem;
+    }
+  }
+  
