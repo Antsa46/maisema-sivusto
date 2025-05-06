@@ -14,7 +14,8 @@ export class UIController {
 
     document.addEventListener('dblclick', () => this.toggleFullscreen());
 
-    document.addEventListener('touchstart', (e) => this.detectDoubleTap(e));
+    document.addEventListener('touchstart', (e) => this.detectDoubleTap(e), { passive: false });
+
   }
 
   detectDoubleTap(event) {
