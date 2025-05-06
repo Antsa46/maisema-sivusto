@@ -15,8 +15,6 @@ document.querySelectorAll('.pikkukuva').forEach(img => {
   });
 });
 
-const mietel = new Mietelauseet('lainaus', lintuLauseet);
-
 window.addEventListener('load', () => {
   const mietel = new Mietelauseet('lainaus', lintuLauseet);
   new UIController(5000, mietel);

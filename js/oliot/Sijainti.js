@@ -1,15 +1,14 @@
 export class Sijainti {
-  constructor(onSuccess, onError) {
+  static async hae() {
     if (!navigator.geolocation) {
-      onError?.(new Error('Geolokaatio ei tuettu'));
-      return;
+      throw new Error('Geolokaatio ei ole tuettu tässä selaimessa');
     }
-    navigator.geolocation.getCurrentPosition(
-      pos => onSuccess(pos.coords.latitude, pos.coords.longitude),
-      err => {
-        console.warn('Geolokaatio epäonnistui:', err);
-        onError?.(err);
-      }
-    );
+
+    return await new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(
+        pos => resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
+        err => reject(err)
+      );
+    });
   }
 }
