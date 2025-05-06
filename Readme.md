@@ -12,6 +12,7 @@ Harjoitustyö on monipuolinen valokuvagalleria, joka yhdistää visuaaliset kuva
 * Astronomiset tiedot: auringon ja kuun nousu- ja laskuajat, kuun etäisyys
 * Interaktiivinen lintujen tunnistuspeli
 * Laskuri, joka tallentaa tiedon localStorageen
+* Koko näytön tila (fullscreen) mahdollista tuplaklikkauksella tai kaksoisnapautuksella – toimii myös mobiililaitteilla (Chrome)
 
 ## 📁 Teemat ja toteutus
 
