@@ -141,6 +141,19 @@
     color: #fff;
     text-decoration: none;
   }
+
+  q {
+    quotes: "“" "”" "‘" "’";
+  }
+  
+  q::before {
+    content: open-quote;
+  }
+  
+  q::after {
+    content: close-quote;
+  }
+  
   
   @media (max-width: 850px) {
     .info-container {
