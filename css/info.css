@@ -182,7 +182,7 @@
   
   @media (max-width: 1024px) {
     .info-text h1 {
-      font-size: 1rem;
+      font-size: 1.6rem;
     }
   
     .info-text p {
@@ -217,7 +217,7 @@
   
   @media (max-width: 768px) {
     .info-text h1 {
-      font-size: 1rem;
+      font-size: 1.6rem;
     }
   
     .info-text p {
