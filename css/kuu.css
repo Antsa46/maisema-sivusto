@@ -97,9 +97,15 @@ html, body {
   color: white;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  z-index: 10;
 }
+
 #nuoli-vasen {
   left: 1rem;
+}
+
+#nuoli-oikea {
+  right: 1rem;
 }
 
 .nuoli:hover {
