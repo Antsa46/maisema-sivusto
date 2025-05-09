@@ -7,16 +7,19 @@ import { luontoLauseet }   from './oliot/Mietelauseet.js';
 
 window.addEventListener('load', () => {
   const mietel = new Mietelauseet('lainaus', luontoLauseet);
-  new UIController(5000, mietel);
-  new Kello('kello');
-  new AurinkoKartta('aurinkokartta');
 
-  new TaustanVaihtaja(
+  const tausta = new TaustanVaihtaja(
     'hero',
     'kuvarivi',
     'valokuvat/luonto/kuva1.jpg',
     { fadeDuration: 1500, overlayColor: 'rgba(0,50,0,0.5)' }
   );
+
+  const ui = new UIController(5000, mietel);
+  ui.setTaustanVaihtaja(tausta); 
+
+  new Kello('kello');
+  new AurinkoKartta('aurinkokartta');
 
   document.querySelectorAll('.pikkukuva').forEach(img => {
     const obs = new IntersectionObserver(entries => {

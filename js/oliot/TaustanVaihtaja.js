@@ -3,10 +3,9 @@ export class TaustanVaihtaja {
     this.hero = document.getElementById(heroId);
     this.kuvarivi = document.getElementById(kuvariviId);
     this.alkuKuva = alkuKuvaUrl;
-    this.kuvaAlkuLisatty = false;
-
     this.fadeDuration = options.fadeDuration ?? 1000;
     this.overlayColor = options.overlayColor ?? '#000';
+    this.kuvaAlkuLisatty = false;
 
     this.overlay = document.createElement('div');
     Object.assign(this.overlay.style, {
@@ -40,10 +39,27 @@ export class TaustanVaihtaja {
         this.hero.style.backgroundImage = `url("${valittu}")`;
         this.overlay.style.opacity = '0';
       }, this.fadeDuration);
+
       if (!this.kuvaAlkuLisatty && !valittu.includes(this.alkuKuva.split('/').pop())) {
         this.lisaaAlkuperainenKuva();
       }
     });
+  }
+
+  seuraavaKuva() {
+    const kuvat = [...this.kuvarivi.querySelectorAll('.pikkukuva')];
+    const nykyinen = this.hero.style.backgroundImage.match(/\/([^\/"]+\.jpg)/)?.[1];
+    const index = kuvat.findIndex(img => img.src.includes(nykyinen));
+    const seuraava = kuvat[(index + 1) % kuvat.length];
+    if (seuraava) seuraava.click();
+  }
+
+  edellinenKuva() {
+    const kuvat = [...this.kuvarivi.querySelectorAll('.pikkukuva')];
+    const nykyinen = this.hero.style.backgroundImage.match(/\/([^\/"]+\.jpg)/)?.[1];
+    const index = kuvat.findIndex(img => img.src.includes(nykyinen));
+    const edellinen = kuvat[(index - 1 + kuvat.length) % kuvat.length];
+    if (edellinen) edellinen.click();
   }
 
   lisaaAlkuperainenKuva() {

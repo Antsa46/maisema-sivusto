@@ -10,11 +10,26 @@ export class UIController {
   }
 
   
-  init() { 
+ setTaustanVaihtaja(taustanVaihtaja) {
+  this.taustanVaihtaja = taustanVaihtaja;
+
+  document.getElementById('nuoli-vasen')?.addEventListener('click', () => {
+    this.taustanVaihtaja.edellinenKuva();
+  });
+
+  document.getElementById('nuoli-oikea')?.addEventListener('click', () => {
+    this.taustanVaihtaja.seuraavaKuva();
+  });
+}
+
+
+  init() {
     document.addEventListener('mousemove', () => this.showUI());
     document.addEventListener('dblclick', () => this.toggleFullscreen());
     document.addEventListener('touchstart', (e) => this.detectDoubleTap(e), { passive: false });
 
+    document.getElementById('nuoli-vasen')?.addEventListener('click', () => this.taustanVaihtaja?.edellinenKuva());
+    document.getElementById('nuoli-oikea')?.addEventListener('click', () => this.taustanVaihtaja?.seuraavaKuva());
   }
 
   detectDoubleTap(event) {
