@@ -154,6 +154,13 @@
     content: close-quote;
   }
   
+.pieni-teksti {
+  font-size: 0.7rem !important;
+  color: #555;
+  margin-top: 0.1rem;
+}
+
+
   
   @media (max-width: 850px) {
     .info-container {
@@ -262,7 +269,18 @@
     footer .ala-valikko {
       font-size: 1.6rem;
     }
-  }
+
+   
+
+.info-text h1,
+.info-text h2,
+.info-text p,
+.laskuri {
+  margin: 0.3rem 0;
+}
+
+
+   }
   
   @media (max-width: 550px) {
     .navigointi {
