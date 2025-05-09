@@ -16,14 +16,20 @@ export const maisemaLauseet = [
       tekija: 'Henry David Thoreau'
     },
     {
-      teksti: "Luonnon ystävä on myös maailman ystävä.",
-      tekija: "Aristoteles"
+      teksti: "Maisema on sieluntila.",
+      tekija: "Henri Frédéric Amiel"
     },
+
     {
       teksti: "Ymmärtääkseen luonnon kauneuden, täytyy nähdä ja kuulla sydämellään.",
       tekija: "ChatGPT"
+    },
+    {
+      teksti: "Maailma on kirja, ja he jotka eivät matkusta lukevat vain yhden sivun.",
+      tekija: "Augustinus Hippo"
     }
 
+    
 
   ];
   
@@ -47,6 +53,10 @@ export const maisemaLauseet = [
     {
       teksti: 'Metsä on sielun peili – siellä kuulee itsensä hiljaisuudessa.',
       tekija: 'Suomalainen sanonta'
+    },
+    {
+      teksti: 'Luonnolla on musiikkia niille, jotka kuuntelevat.',
+      tekija: '-'
     }
   ];
 
@@ -65,11 +75,15 @@ export const maisemaLauseet = [
     },
     {
       teksti: 'Lintu ei laula, koska sillä on vastaus – se laulaa, koska sillä on laulu.',
-      tekija: 'Maya Angelou'
+      tekija: 'Joan Walsh Anglund'
     },
     {
       teksti: 'Aamu alkaa, kun ensimmäinen lintu ei vain laula – vaan herättää metsän.',
       tekija: 'Tuntematon'
+    },
+    {
+      teksti: 'Olkaamme kuin lintu, joka hetkeksi istuu heiveröiselle oksalle – se tuntee oksan taipuvan, mutta laulaa silti, tietäen että sillä on siivet.',
+      tekija: 'Victor Hugo'
     }
   ];
 
