@@ -12,7 +12,7 @@ export class AurinkoKartta {
     this.focusOffsetY = 0;
     this.draw();
   }
-
+ // test
   
   getDayOfYear(date) {
     const start = new Date(date.getFullYear(), 0, 1);
