@@ -76,3 +76,14 @@ localStorage.setItem('laskuriArvo', this.count);
 
 Sivusto on julkaistu GitHub Pagesin kautta:
 👉 [https://Antsa46.github.io/maisema-sivusto](https://Antsa46.github.io/maisema-sivusto)
+
+## 📜 Lisenssit ja kiitokset
+
+Tämä projekti hyödyntää seuraavia avoimen lähdekoodin kirjastoja ja palveluita:
+
+- [SunCalc](https://github.com/mourner/suncalc)  
+  Copyright (c) 2011–2015, Vladimir Agafonkin  
+  Lisensoitu BSD 2-Clause -lisenssillä
+
+- [OpenWeatherMap](https://openweathermap.org/) – säädata
+
